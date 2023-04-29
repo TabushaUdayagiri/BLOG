@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BLOG</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sticy-top">
+                <h1 class="text-center p-3 mb-2 bg-info text-dark">Django Web Development : BLOG</h1>
+                <a class="btn btn-dark" href="{% url 'home' %}">HOME</a>
+                <a class="btn btn-primary" href="{% url 'app1:signup' %}">SIGN UP</a>
+                <a class="btn btn-success" href="{% url 'app1:login' %}">LOGIN</a>
+            </div>
+            <div class="c1">
+                {% block b1 %}
+                {% endblock b1 %}
+            </div>
+            <div class="container fixed-bottom">
+                <h1 class="text-center p-3 mb-2 bg-info text-red">Thanks for visiting</h1>
+            </div>
+        </div>
+    </body>
+</html>

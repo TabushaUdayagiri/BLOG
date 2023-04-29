@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block b1 %}
+<div  class=" form-group row">
+    <div class="col-sm-12 text-center">
+    <form action="" method="post">
+        {% csrf_token %}
+        {% for i in form %}
+        <label for="" class="col-sm-1 offset-0">{{i.label_tag}}</label>
+            {{i}}{{i.errors|striptags}} <br><br>
+        {% endfor %}       
+        <input class="btn btn-success col-sm-2" type="submit" value="Login">
+    </form>
+{% endblock b1 %}

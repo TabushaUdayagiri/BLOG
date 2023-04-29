@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block b1 %}
+    <h2 class="text-center">{{msg}}</h2>
+    {% for i in content %}
+        <h1>{{i.title}}</h1> <br>
+        <h3>{{i.description}}</h3>
+    {% endfor %}
+{% endblock b1 %}
